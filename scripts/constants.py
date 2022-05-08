@@ -1,0 +1,2 @@
+HEIGHT = 64
+WIDTH = 64

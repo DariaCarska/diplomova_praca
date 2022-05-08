@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 # %%
 # example of training a gan on mnist
+import numpy as np
 from numpy import expand_dims
 from numpy import zeros
 from numpy import ones
@@ -9,7 +10,7 @@ from numpy import vstack
 from numpy.random import randn
 from numpy.random import randint
 from keras.datasets.mnist import load_data
-from keras.optimizers import Adam
+from tensorflow.keras.optimizers import Adam
 from keras.models import Sequential
 from keras.layers import Dense
 from keras.layers import Reshape
@@ -19,10 +20,13 @@ from keras.layers import Conv2DTranspose
 from keras.layers import LeakyReLU
 from keras.layers import Dropout
 from matplotlib import pyplot
+from constants import WIDTH, HEIGHT
+from data_preprocessing import preprocess_data
+import os
 
-# %%
+#%%
 # define the standalone discriminator model
-def define_discriminator(in_shape=(28,28,1)):
+def define_discriminator(in_shape=(WIDTH,HEIGHT,1)):
 	model = Sequential()
 	model.add(Conv2D(64, (3,3), strides=(2, 2), padding='same', input_shape=in_shape))
 	model.add(LeakyReLU(alpha=0.2))
@@ -36,22 +40,29 @@ def define_discriminator(in_shape=(28,28,1)):
 	opt = Adam(lr=0.0002, beta_1=0.5)
 	model.compile(loss='binary_crossentropy', optimizer=opt, metrics=['accuracy'])
 	return model
-
+#%%
 # define the standalone generator model
 def define_generator(latent_dim):
 	model = Sequential()
-	# foundation for 7x7 image
-	n_nodes = 128 * 7 * 7
+	# foundation for 32x32 image
+	n_nodes = 128 * 8 * 8
+
+	
 	model.add(Dense(n_nodes, input_dim=latent_dim))
 	model.add(LeakyReLU(alpha=0.2))
-	model.add(Reshape((7, 7, 128)))
-	# upsample to 14x14
-	model.add(Conv2DTranspose(128, (4,4), strides=(2,2), padding='same'))
-	model.add(LeakyReLU(alpha=0.2))
-	# upsample to 28x28
-	model.add(Conv2DTranspose(128, (4,4), strides=(2,2), padding='same'))
-	model.add(LeakyReLU(alpha=0.2))
-	model.add(Conv2D(1, (7,7), activation='sigmoid', padding='same'))
+	model.add(Reshape((8, 8, 128)))
+	for i in range(3):
+		# upsample to 64x64
+		model.add(Conv2DTranspose(128, (4,4), strides=(2,2), padding='same'))
+		model.add(LeakyReLU(alpha=0.2))
+	# upsample to 128x128
+	# model.add(Conv2DTranspose(128, (4,4), strides=(2,2), padding='same'))
+	# model.add(LeakyReLU(alpha=0.2))
+	# upsample to 256x256
+	# model.add(Conv2DTranspose(128, (4,4), strides=(2,2), padding='same'))
+	# model.add(LeakyReLU(alpha=0.2))
+
+	model.add(Conv2D(1, (8,8), activation='sigmoid', padding='same'))
 	return model
 
 # define the combined generator and discriminator model, for updating the generator
@@ -68,19 +79,31 @@ def define_gan(g_model, d_model):
 	opt = Adam(lr=0.0002, beta_1=0.5)
 	model.compile(loss='binary_crossentropy', optimizer=opt)
 	return model
-
+# %%
 # load and prepare mnist training images
 def load_real_samples():
+	num_samples = 0
+	for dir in os.listdir('../data/Invisalign'):
+		num_samples += sum(['front' in i for i in os.listdir('../data/Invisalign/' + dir)])
+	
+	X = np.empty((num_samples, WIDTH, HEIGHT, 1))
+	i = 0
+	for dir in os.listdir('../data/Invisalign'):
+		for sample in os.listdir('../data/Invisalign/' + dir):
+			if 'front' in sample:
+				X[i,:,:,0] = preprocess_data(os.path.join('../data/Invisalign', dir, sample))
+				i += 1
+
 	# load mnist dataset
-	(trainX, _), (_, _) = load_data()
+	# (trainX, _), (_, _) = load_data()
 	# expand to 3d, e.g. add channels dimension
-	X = expand_dims(trainX, axis=-1)
+	# X = expand_dims(trainX, axis=-1)
 	# convert from unsigned ints to floats
 	X = X.astype('float32')
 	# scale from [0,255] to [0,1]
 	X = X / 255.0
 	return X
-
+# %%
 # select real samples
 def generate_real_samples(dataset, n_samples):
 	# choose random instances
@@ -143,13 +166,13 @@ def summarize_performance(epoch, g_model, d_model, dataset, latent_dim, n_sample
 	g_model.save(filename)
 
 # train the generator and discriminator
-def train(g_model, d_model, gan_model, dataset, latent_dim, n_epochs=100, n_batch=256):
-	bat_per_epo = int(dataset.shape[0] / n_batch)
+def train(g_model, d_model, gan_model, dataset, latent_dim, n_epochs=100, batch_size=32):
+	n_batch = int(dataset.shape[0] / batch_size)
 	half_batch = int(n_batch / 2)
 	# manually enumerate epochs
 	for i in range(n_epochs):
 		# enumerate batches over the training set
-		for j in range(bat_per_epo):
+		for j in range(batch_size):
 			# get randomly selected 'real' samples
 			X_real, y_real = generate_real_samples(dataset, half_batch)
 			# generate 'fake' examples
@@ -165,12 +188,12 @@ def train(g_model, d_model, gan_model, dataset, latent_dim, n_epochs=100, n_batc
 			# update the generator via the discriminator's error
 			g_loss = gan_model.train_on_batch(X_gan, y_gan)
 			# summarize loss on this batch
-			print('>%d, %d/%d, d=%.3f, g=%.3f' % (i+1, j+1, bat_per_epo, d_loss, g_loss))
+			print('>%d, %d/%d, d=%.3f, g=%.3f' % (i+1, j+1, batch_size, d_loss, g_loss))
 		# evaluate the model performance, sometimes
 		if (i+1) % 10 == 0:
 			summarize_performance(i, g_model, d_model, dataset, latent_dim)
 
-# size of the latent space
+# %% size of the latent space
 latent_dim = 100
 # create the discriminator
 d_model = define_discriminator()
@@ -178,7 +201,10 @@ d_model = define_discriminator()
 g_model = define_generator(latent_dim)
 # create the gan
 gan_model = define_gan(g_model, d_model)
-# load image data
+# %% load image data
 dataset = load_real_samples()
-# train model
+
+# %% train model
 train(g_model, d_model, gan_model, dataset, latent_dim)
+
+# %%

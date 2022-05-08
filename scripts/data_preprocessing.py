@@ -1,9 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-
-HEIGHT = 256
-WIDTH = 256
-
+# %%
+from constants import WIDTH, HEIGHT
 from PIL import Image
 import numpy as np
 
@@ -14,10 +12,10 @@ def preprocess_data(img_path):
     w, h = img.size
     if w > WIDTH or h > HEIGHT:
         scale = min(WIDTH / w, HEIGHT / h)
-        new_w = int(np.floor(scale * w))
-        new_h = int(np.floor((scale * h)))
-        img_scaled = img_gray.resize((new_w, new_h))
+        w = int(np.floor(scale * w))
+        h = int(np.floor((scale * h)))
+        img_gray = img_gray.resize((w, h))
     
     img_padded = np.zeros((WIDTH, HEIGHT), dtype = np.int)
-    img_padded[:new_h, :new_w] = np.array(img_scaled)
+    img_padded[:h, :w] = np.array(img_gray)
     return img_padded
