@@ -149,11 +149,5 @@ model = load_model("../models/generator")
 X, y = generate_fake_samples(model, 100, 1)
 pyplot.imshow(X[0,:,:,0], cmap='gray')
 pyplot.savefig("../plots/fake_sample1.png")
-# %%
-X, y = generate_fake_samples(model, 100, 1)
-pyplot.imshow(X[0,:,:,0], cmap='gray')
-# %%
-X, y = generate_fake_samples(model, 100, 1)
-pyplot.imshow(X[0,:,:,0], cmap='gray')
-pyplot.savefig("../plots/fake_sample4.png")
+
 # %%
