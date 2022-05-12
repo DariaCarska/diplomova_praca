@@ -10,7 +10,7 @@
 - analýza zubov použitím techník hlbokého učenia
 
 ## Naštudovaná literatúra
-- [Intraoral image generation by progressive growing of generative adversarial network and evaluation of generated image quality by dentists](https://www.sciencedirect.com/science/article/abs/pii/S0300571218302781?casa_token=wBOaNKhLohYAAAAA:fEwUNoLiFeKO_0834-y7hmNegzvcDlB0_tLQPNfZnJph0FTZeWgsLQQ2bxI6_NriEHiq9oWKmw)
+- [Intraoral image generation by progressive growing of generative adversarial network and evaluation of generated image quality by dentists](https://www.nature.com/articles/s41598-021-98043-3)
 - [Mapping intraoral photographs on virtual teeth model](https://www.sciencedirect.com/science/article/abs/pii/S0300571218302781?casa_token=wBOaNKhLohYAAAAA:fEwUNoLiFeKO_0834-y7hmNegzvcDlB0_tLQPNfZnJph0FTZeWgsLQQ2bxI6_NriEHiq9oWKmw)
 - [Tooth Numbering and Condition Recognition on Dental Panoramic Radiograph Images Using CNNs](https://ieeexplore.ieee.org/abstract/document/9652543)
 - [TSegNet: An efficient and accurate tooth segmentation network on 3D dental model](https://www.sciencedirect.com/science/article/abs/pii/S1361841520303133?casa_token=sfJy78D3uWsAAAAA:O80xxmJ4YvLEJpGrLzJZVu1g6lgFPKOVP-UU2VLh84vQwDZXfB1lgIuNdjXfmDwaWDgfUurKGWQ)
