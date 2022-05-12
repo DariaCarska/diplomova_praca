@@ -116,7 +116,7 @@ def summarize_performance(epoch, g_model, d_model, dataset, latent_dim, n_sample
 	filename = 'generator_model_%03d.h5' % (epoch + 1)
 	g_model.save(filename)
 
-def train(g_model, d_model, gan_model, dataset, latent_dim, n_epochs=100, batch_size=32):
+def train(g_model, d_model, gan_model, dataset, latent_dim, n_epochs=20, batch_size=32):
 	n_batch = int(dataset.shape[0] / batch_size)
 	half_batch = int(n_batch / 2)
 	for i in range(n_epochs):
@@ -143,13 +143,17 @@ dataset = load_real_samples()
 # %% train model
 train(g_model, d_model, gan_model, dataset, latent_dim)
 
-# %% save model
 g_model.save("../models/generator")
-# %%
+
 model = load_model("../models/generator")
-# %%
 X, y = generate_fake_samples(model, 100, 1)
-# %%
 pyplot.imshow(X[0,:,:,0], cmap='gray')
 pyplot.savefig("../plots/fake_sample1.png")
+# %%
+X, y = generate_fake_samples(model, 100, 1)
+pyplot.imshow(X[0,:,:,0], cmap='gray')
+# %%
+X, y = generate_fake_samples(model, 100, 1)
+pyplot.imshow(X[0,:,:,0], cmap='gray')
+pyplot.savefig("../plots/fake_sample4.png")
 # %%
