@@ -112,9 +112,6 @@ def summarize_performance(epoch, g_model, d_model, dataset, latent_dim, n_sample
 	x_fake, y_fake = generate_fake_samples(g_model, latent_dim, n_samples)
 	_, acc_fake = d_model.evaluate(x_fake, y_fake, verbose=0)
 	print('>Accuracy real: %.0f%%, fake: %.0f%%' % (acc_real*100, acc_fake*100))
-	save_plot(x_fake, epoch)
-	filename = 'generator_model_%03d.h5' % (epoch + 1)
-	g_model.save(filename)
 
 def train(g_model, d_model, gan_model, dataset, latent_dim, n_epochs=20, batch_size=32):
 	n_batch = int(dataset.shape[0] / batch_size)
