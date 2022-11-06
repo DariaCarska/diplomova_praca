@@ -1,8 +1,9 @@
-import requests
 import os
-from tqdm import tqdm
-from bs4 import BeautifulSoup as bs
 from urllib.parse import urljoin, urlparse
+
+import requests
+from bs4 import BeautifulSoup as bs
+from tqdm import tqdm
 
 
 def is_valid(url):
@@ -11,6 +12,7 @@ def is_valid(url):
     """
     parsed = urlparse(url)
     return bool(parsed.netloc) and bool(parsed.scheme)
+
 
 def get_all_images(url):
     """
@@ -22,7 +24,7 @@ def get_all_images(url):
         img_url = img.attrs.get("data-photo_max")
         if not img_url:
             continue
-        
+
         img_url = urljoin(url, img_url)
         try:
             pos = img_url.index("?")
@@ -33,6 +35,7 @@ def get_all_images(url):
             urls.append(img_url)
     return urls
 
+
 def download(url, pathname):
     """
     Downloads a file given an URL and puts it in the folder `pathname`
@@ -42,11 +45,13 @@ def download(url, pathname):
     response = requests.get(url, stream=True)
     file_size = int(response.headers.get("Content-Length", 0))
     filename = os.path.join(pathname, url.split("/")[-1])
-    progress = tqdm(response.iter_content(1024), f"Downloading {filename}", total=file_size, unit="B", unit_scale=True, unit_divisor=1024)
+    progress = tqdm(response.iter_content(1024), f"Downloading {filename}", total=file_size, unit="B", unit_scale=True,
+                    unit_divisor=1024)
     with open(filename, "wb") as f:
         for data in progress.iterable:
             f.write(data)
             progress.update(len(data))
+
 
 def main(url, path):
     imgs = get_all_images(url)
@@ -60,7 +65,4 @@ def main(url, path):
 for i in range(1, 1531):
     i = str(i)
     url = 'https://global.invisaligngallery.com/treatment/t-' + i
-    main(url, 'data/Invisalign/'+i)
-
-
-
+    main(url, 'data/Invisalign/' + i)
