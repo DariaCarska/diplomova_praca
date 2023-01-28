@@ -20,7 +20,7 @@
 - nainštalovanie potrebného softvéru
 - napísanie [skriptu](scripts/download_images.py) na automatizované sťahovanie fotiek chrupu z webovej stránky spoločnosti Invisalign
 - [predspracovanie](scripts/data_preprocessing.py) fotiek pre účely trénovania siete
-- [implementácia GAN siete](scripts/train_gan.py) s jednoduchou architektúrou na generovanie fotiek frontálneho úseku chrupu
+- [implementácia GAN siete](scripts/train_gan_blackwhite.py) s jednoduchou architektúrou na generovanie fotiek frontálneho úseku chrupu
 
 ## Reprodukcia výsledkov
 

@@ -1,20 +1,18 @@
 import numpy as np
-from PIL import Image
+from PIL import Image, ImageFile
+ImageFile.LOAD_TRUNCATED_IMAGES = True
 
-from constants import WIDTH, HEIGHT
 
-
-def preprocess_data(img_path):
-    img = Image.open(img_path)
-    img_gray = img.convert('L')
-
+def preprocess_data(img_path, width, height):
+    img = Image.open(img_path).convert('RGB')
     w, h = img.size
-    if w > WIDTH or h > HEIGHT:
-        scale = min(WIDTH / w, HEIGHT / h)
-        w = int(np.floor(scale * w))
-        h = int(np.floor((scale * h)))
-        img_gray = img_gray.resize((w, h))
+    if w > width or h > height:
+        scale = min(width / w, height / h)
+        w = int(scale * w)
+        h = int(scale * h)
+        img = img.resize((w,h))
 
-    img_padded = np.zeros((WIDTH, HEIGHT), dtype=np.int)
-    img_padded[:h, :w] = np.array(img_gray)
+    img_padded = np.zeros((height, width, 3), dtype=np.byte)
+    img_padded[:h, :w] = np.array(img, dtype=np.byte)
     return img_padded
+

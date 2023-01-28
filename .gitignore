@@ -3,3 +3,10 @@ data/
 venv/
 *pycache*
 .idea
+plots/
+models/
+filtered_data
+raw_data
+scripts/image_size_statistics.py
+scripts/plot_image.py
+scripts/data_loading.py

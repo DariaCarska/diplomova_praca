@@ -1,3 +1,4 @@
+import logging
 import os
 from urllib.parse import urljoin, urlparse
 
@@ -53,7 +54,7 @@ def download(url, pathname):
             progress.update(len(data))
 
 
-def main(url, path):
+def download_treatment_photos(url, path):
     imgs = get_all_images(url)
     unique = []
     for img in imgs:
@@ -62,7 +63,14 @@ def main(url, path):
             download(img, path)
 
 
-for i in range(1, 1531):
+logging.basicConfig(level=logging.INFO, filename='data/downloadingInvisalign.log', filemode='a',
+                    format='%(levelname)s: %(message)s')
+
+for i in range(1, 1635):
     i = str(i)
     url = 'https://global.invisaligngallery.com/treatment/t-' + i
-    main(url, 'data/Invisalign/' + i)
+    try:
+        download_treatment_photos(url, 'raw_data/Invisalign/' + i)
+        logging.info('Images of patient ' + i + ' have been downloaded')
+    except:
+        logging.error('Something went wrong when downloading images of patient ' + i)
