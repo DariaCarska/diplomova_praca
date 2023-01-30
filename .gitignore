@@ -3,7 +3,10 @@ data/
 venv/
 *pycache*
 .idea
-plots/
+plots/result_images
+plots/result_images2
+plots/result_images-128resolution
+plots/result_images_3000epochs
 models/
 filtered_data
 raw_data
