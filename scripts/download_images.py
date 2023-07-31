@@ -8,17 +8,11 @@ from tqdm import tqdm
 
 
 def is_valid(url):
-    """
-    Checks whether `url` is a valid URL.
-    """
     parsed = urlparse(url)
     return bool(parsed.netloc) and bool(parsed.scheme)
 
 
 def get_all_images(url):
-    """
-    Returns all image URLs on a single `url`
-    """
     soup = bs(requests.get(url).content, "html.parser")
     urls = []
     for img in tqdm(soup.find_all("img"), "Extracting images"):
@@ -38,9 +32,6 @@ def get_all_images(url):
 
 
 def download(url, pathname):
-    """
-    Downloads a file given an URL and puts it in the folder `pathname`
-    """
     if not os.path.isdir(pathname):
         os.makedirs(pathname)
     response = requests.get(url, stream=True)
@@ -66,7 +57,7 @@ def download_treatment_photos(url, path):
 logging.basicConfig(level=logging.INFO, filename='data/downloadingInvisalign.log', filemode='a',
                     format='%(levelname)s: %(message)s')
 
-for i in range(1, 1635):
+for i in range(1,1722):
     i = str(i)
     url = 'https://global.invisaligngallery.com/treatment/t-' + i
     try:

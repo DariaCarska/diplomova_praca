@@ -1,0 +1,294 @@
+loading data from the trained model at: /home/c/carska8/diplomova_praca/results/progan_front256padding/models/depth_2_epoch_10.bin
+generating random images from the trained generator ...
+computing fid ...
+compute FID between two folders
+Found 4065 images in the folder /home/c/carska8/diplomova_praca/data/front_256
+Found 100 images in the folder /tmp/tmp7njl5729
+fid score:  418.040
+loading data from the trained model at: /home/c/carska8/diplomova_praca/results/progan_front256padding/models/depth_2_epoch_1.bin
+generating random images from the trained generator ...
+computing fid ...
+compute FID between two folders
+Found 4065 images in the folder /home/c/carska8/diplomova_praca/data/front_256
+Found 100 images in the folder /tmp/tmp0eapnqas
+fid score:  407.939
+loading data from the trained model at: /home/c/carska8/diplomova_praca/results/progan_front256padding/models/depth_2_epoch_20.bin
+generating random images from the trained generator ...
+computing fid ...
+compute FID between two folders
+Found 4065 images in the folder /home/c/carska8/diplomova_praca/data/front_256
+Found 100 images in the folder /tmp/tmpgc9wb_sd
+fid score:  437.569
+loading data from the trained model at: /home/c/carska8/diplomova_praca/results/progan_front256padding/models/depth_2_epoch_30.bin
+generating random images from the trained generator ...
+computing fid ...
+compute FID between two folders
+Found 4065 images in the folder /home/c/carska8/diplomova_praca/data/front_256
+Found 100 images in the folder /tmp/tmprgk_whjy
+fid score:  417.627
+loading data from the trained model at: /home/c/carska8/diplomova_praca/results/progan_front256padding/models/depth_2_epoch_40.bin
+generating random images from the trained generator ...
+computing fid ...
+compute FID between two folders
+Found 4065 images in the folder /home/c/carska8/diplomova_praca/data/front_256
+Found 100 images in the folder /tmp/tmpr15htzy9
+fid score:  407.909
+loading data from the trained model at: /home/c/carska8/diplomova_praca/results/progan_front256padding/models/depth_2_epoch_42.bin
+generating random images from the trained generator ...
+computing fid ...
+compute FID between two folders
+Found 4065 images in the folder /home/c/carska8/diplomova_praca/data/front_256
+Found 100 images in the folder /tmp/tmph5imvfmm
+fid score:  404.080
+loading data from the trained model at: /home/c/carska8/diplomova_praca/results/progan_front256padding/models/depth_3_epoch_10.bin
+generating random images from the trained generator ...
+computing fid ...
+compute FID between two folders
+Found 4065 images in the folder /home/c/carska8/diplomova_praca/data/front_256
+Found 100 images in the folder /tmp/tmph0pkhcil
+fid score:  452.113
+loading data from the trained model at: /home/c/carska8/diplomova_praca/results/progan_front256padding/models/depth_3_epoch_1.bin
+generating random images from the trained generator ...
+computing fid ...
+compute FID between two folders
+Found 4065 images in the folder /home/c/carska8/diplomova_praca/data/front_256
+Found 100 images in the folder /tmp/tmp76ay3yg5
+fid score:  446.263
+loading data from the trained model at: /home/c/carska8/diplomova_praca/results/progan_front256padding/models/depth_3_epoch_20.bin
+generating random images from the trained generator ...
+computing fid ...
+compute FID between two folders
+Found 4065 images in the folder /home/c/carska8/diplomova_praca/data/front_256
+Found 100 images in the folder /tmp/tmpzjf_alvl
+fid score:  457.341
+loading data from the trained model at: /home/c/carska8/diplomova_praca/results/progan_front256padding/models/depth_3_epoch_30.bin
+generating random images from the trained generator ...
+computing fid ...
+compute FID between two folders
+Found 4065 images in the folder /home/c/carska8/diplomova_praca/data/front_256
+Found 100 images in the folder /tmp/tmpm0yhesvy
+fid score:  468.722
+loading data from the trained model at: /home/c/carska8/diplomova_praca/results/progan_front256padding/models/depth_3_epoch_40.bin
+generating random images from the trained generator ...
+computing fid ...
+compute FID between two folders
+Found 4065 images in the folder /home/c/carska8/diplomova_praca/data/front_256
+Found 100 images in the folder /tmp/tmpwt9wp85j
+fid score:  459.535
+loading data from the trained model at: /home/c/carska8/diplomova_praca/results/progan_front256padding/models/depth_3_epoch_42.bin
+generating random images from the trained generator ...
+computing fid ...
+compute FID between two folders
+Found 4065 images in the folder /home/c/carska8/diplomova_praca/data/front_256
+Found 100 images in the folder /tmp/tmpe2crmhca
+fid score:  457.776
+loading data from the trained model at: /home/c/carska8/diplomova_praca/results/progan_front256padding/models/depth_4_epoch_10.bin
+generating random images from the trained generator ...
+computing fid ...
+compute FID between two folders
+Found 4065 images in the folder /home/c/carska8/diplomova_praca/data/front_256
+Found 100 images in the folder /tmp/tmp4y2j7ozq
+fid score:  442.750
+loading data from the trained model at: /home/c/carska8/diplomova_praca/results/progan_front256padding/models/depth_4_epoch_1.bin
+generating random images from the trained generator ...
+computing fid ...
+compute FID between two folders
+Found 4065 images in the folder /home/c/carska8/diplomova_praca/data/front_256
+Found 100 images in the folder /tmp/tmp5x1axqur
+fid score:  433.937
+loading data from the trained model at: /home/c/carska8/diplomova_praca/results/progan_front256padding/models/depth_4_epoch_20.bin
+generating random images from the trained generator ...
+computing fid ...
+compute FID between two folders
+Found 4065 images in the folder /home/c/carska8/diplomova_praca/data/front_256
+Found 100 images in the folder /tmp/tmpfjo9ks6f
+fid score:  411.573
+loading data from the trained model at: /home/c/carska8/diplomova_praca/results/progan_front256padding/models/depth_4_epoch_30.bin
+generating random images from the trained generator ...
+computing fid ...
+compute FID between two folders
+Found 4065 images in the folder /home/c/carska8/diplomova_praca/data/front_256
+Found 100 images in the folder /tmp/tmpat7e7auw
+fid score:  410.067
+loading data from the trained model at: /home/c/carska8/diplomova_praca/results/progan_front256padding/models/depth_4_epoch_40.bin
+generating random images from the trained generator ...
+computing fid ...
+compute FID between two folders
+Found 4065 images in the folder /home/c/carska8/diplomova_praca/data/front_256
+Found 100 images in the folder /tmp/tmppbxg146a
+fid score:  410.288
+loading data from the trained model at: /home/c/carska8/diplomova_praca/results/progan_front256padding/models/depth_4_epoch_42.bin
+generating random images from the trained generator ...
+computing fid ...
+compute FID between two folders
+Found 4065 images in the folder /home/c/carska8/diplomova_praca/data/front_256
+Found 100 images in the folder /tmp/tmpcumdlfex
+fid score:  409.889
+loading data from the trained model at: /home/c/carska8/diplomova_praca/results/progan_front256padding/models/depth_5_epoch_10.bin
+generating random images from the trained generator ...
+computing fid ...
+compute FID between two folders
+Found 4065 images in the folder /home/c/carska8/diplomova_praca/data/front_256
+Found 100 images in the folder /tmp/tmpzfeo9odz
+fid score:  390.182
+loading data from the trained model at: /home/c/carska8/diplomova_praca/results/progan_front256padding/models/depth_5_epoch_1.bin
+generating random images from the trained generator ...
+computing fid ...
+compute FID between two folders
+Found 4065 images in the folder /home/c/carska8/diplomova_praca/data/front_256
+Found 100 images in the folder /tmp/tmpnr0h0v08
+fid score:  401.604
+loading data from the trained model at: /home/c/carska8/diplomova_praca/results/progan_front256padding/models/depth_5_epoch_20.bin
+generating random images from the trained generator ...
+computing fid ...
+compute FID between two folders
+Found 4065 images in the folder /home/c/carska8/diplomova_praca/data/front_256
+Found 100 images in the folder /tmp/tmpr37ev6qb
+fid score:  400.203
+loading data from the trained model at: /home/c/carska8/diplomova_praca/results/progan_front256padding/models/depth_5_epoch_30.bin
+generating random images from the trained generator ...
+computing fid ...
+compute FID between two folders
+Found 4065 images in the folder /home/c/carska8/diplomova_praca/data/front_256
+Found 100 images in the folder /tmp/tmpde3j4qqx
+fid score:  407.092
+loading data from the trained model at: /home/c/carska8/diplomova_praca/results/progan_front256padding/models/depth_5_epoch_40.bin
+generating random images from the trained generator ...
+computing fid ...
+compute FID between two folders
+Found 4065 images in the folder /home/c/carska8/diplomova_praca/data/front_256
+Found 100 images in the folder /tmp/tmpr2tupyzg
+fid score:  391.668
+loading data from the trained model at: /home/c/carska8/diplomova_praca/results/progan_front256padding/models/depth_5_epoch_42.bin
+generating random images from the trained generator ...
+computing fid ...
+compute FID between two folders
+Found 4065 images in the folder /home/c/carska8/diplomova_praca/data/front_256
+Found 100 images in the folder /tmp/tmpdj7bo1qh
+fid score:  385.787
+loading data from the trained model at: /home/c/carska8/diplomova_praca/results/progan_front256padding/models/depth_6_epoch_10.bin
+generating random images from the trained generator ...
+computing fid ...
+compute FID between two folders
+Found 4065 images in the folder /home/c/carska8/diplomova_praca/data/front_256
+Found 100 images in the folder /tmp/tmpydj8l92n
+fid score:  471.332
+loading data from the trained model at: /home/c/carska8/diplomova_praca/results/progan_front256padding/models/depth_6_epoch_1.bin
+generating random images from the trained generator ...
+computing fid ...
+compute FID between two folders
+Found 4065 images in the folder /home/c/carska8/diplomova_praca/data/front_256
+Found 100 images in the folder /tmp/tmpk7npxz4j
+fid score:  461.312
+loading data from the trained model at: /home/c/carska8/diplomova_praca/results/progan_front256padding/models/depth_6_epoch_20.bin
+generating random images from the trained generator ...
+computing fid ...
+compute FID between two folders
+Found 4065 images in the folder /home/c/carska8/diplomova_praca/data/front_256
+Found 100 images in the folder /tmp/tmpuf85r4p_
+fid score:  470.958
+loading data from the trained model at: /home/c/carska8/diplomova_praca/results/progan_front256padding/models/depth_6_epoch_30.bin
+generating random images from the trained generator ...
+computing fid ...
+compute FID between two folders
+Found 4065 images in the folder /home/c/carska8/diplomova_praca/data/front_256
+Found 100 images in the folder /tmp/tmp0g64jacv
+fid score:  411.577
+loading data from the trained model at: /home/c/carska8/diplomova_praca/results/progan_front256padding/models/depth_6_epoch_40.bin
+generating random images from the trained generator ...
+computing fid ...
+compute FID between two folders
+Found 4065 images in the folder /home/c/carska8/diplomova_praca/data/front_256
+Found 100 images in the folder /tmp/tmpxfjbm5qm
+fid score:  434.755
+loading data from the trained model at: /home/c/carska8/diplomova_praca/results/progan_front256padding/models/depth_6_epoch_42.bin
+generating random images from the trained generator ...
+computing fid ...
+compute FID between two folders
+Found 4065 images in the folder /home/c/carska8/diplomova_praca/data/front_256
+Found 100 images in the folder /tmp/tmpbzuleqo5
+fid score:  442.567
+loading data from the trained model at: /home/c/carska8/diplomova_praca/results/progan_front256padding/models/depth_7_epoch_10.bin
+generating random images from the trained generator ...
+computing fid ...
+compute FID between two folders
+Found 4065 images in the folder /home/c/carska8/diplomova_praca/data/front_256
+Found 100 images in the folder /tmp/tmp7k6ue2u8
+fid score:  472.136
+loading data from the trained model at: /home/c/carska8/diplomova_praca/results/progan_front256padding/models/depth_7_epoch_1.bin
+generating random images from the trained generator ...
+computing fid ...
+compute FID between two folders
+Found 4065 images in the folder /home/c/carska8/diplomova_praca/data/front_256
+Found 100 images in the folder /tmp/tmpv91_tpem
+fid score:  505.802
+loading data from the trained model at: /home/c/carska8/diplomova_praca/results/progan_front256padding/models/depth_7_epoch_20.bin
+generating random images from the trained generator ...
+computing fid ...
+compute FID between two folders
+Found 4065 images in the folder /home/c/carska8/diplomova_praca/data/front_256
+Found 100 images in the folder /tmp/tmpc83zrluy
+fid score:  399.222
+loading data from the trained model at: /home/c/carska8/diplomova_praca/results/progan_front256padding/models/depth_7_epoch_30.bin
+generating random images from the trained generator ...
+computing fid ...
+compute FID between two folders
+Found 4065 images in the folder /home/c/carska8/diplomova_praca/data/front_256
+Found 100 images in the folder /tmp/tmptv3q40e5
+fid score:  388.259
+loading data from the trained model at: /home/c/carska8/diplomova_praca/results/progan_front256padding/models/depth_7_epoch_40.bin
+generating random images from the trained generator ...
+computing fid ...
+compute FID between two folders
+Found 4065 images in the folder /home/c/carska8/diplomova_praca/data/front_256
+Found 100 images in the folder /tmp/tmpcui4qavz
+fid score:  367.186
+loading data from the trained model at: /home/c/carska8/diplomova_praca/results/progan_front256padding/models/depth_7_epoch_42.bin
+generating random images from the trained generator ...
+computing fid ...
+compute FID between two folders
+Found 4065 images in the folder /home/c/carska8/diplomova_praca/data/front_256
+Found 100 images in the folder /tmp/tmpiftprmd8
+fid score:  367.515
+loading data from the trained model at: /home/c/carska8/diplomova_praca/results/progan_front256padding/models/depth_8_epoch_10.bin
+generating random images from the trained generator ...
+computing fid ...
+compute FID between two folders
+Found 4065 images in the folder /home/c/carska8/diplomova_praca/data/front_256
+Found 100 images in the folder /tmp/tmp3kh_6rxn
+fid score:  407.164
+loading data from the trained model at: /home/c/carska8/diplomova_praca/results/progan_front256padding/models/depth_8_epoch_1.bin
+generating random images from the trained generator ...
+computing fid ...
+compute FID between two folders
+Found 4065 images in the folder /home/c/carska8/diplomova_praca/data/front_256
+Found 100 images in the folder /tmp/tmp8e2lw4ja
+fid score:  388.168
+loading data from the trained model at: /home/c/carska8/diplomova_praca/results/progan_front256padding/models/depth_8_epoch_20.bin
+generating random images from the trained generator ...
+computing fid ...
+compute FID between two folders
+Found 4065 images in the folder /home/c/carska8/diplomova_praca/data/front_256
+Found 100 images in the folder /tmp/tmp1ikbt0ga
+fid score:  340.431
+loading data from the trained model at: /home/c/carska8/diplomova_praca/results/progan_front256padding/models/depth_8_epoch_30.bin
+generating random images from the trained generator ...
+computing fid ...
+compute FID between two folders
+Found 4065 images in the folder /home/c/carska8/diplomova_praca/data/front_256
+Found 100 images in the folder /tmp/tmp8kgtqkuu
+fid score:  340.272
+loading data from the trained model at: /home/c/carska8/diplomova_praca/results/progan_front256padding/models/depth_8_epoch_40.bin
+generating random images from the trained generator ...
+computing fid ...
+compute FID between two folders
+Found 4065 images in the folder /home/c/carska8/diplomova_praca/data/front_256
+Found 100 images in the folder /tmp/tmpltmfogyv
+fid score:  331.587
+loading data from the trained model at: /home/c/carska8/diplomova_praca/results/progan_front256padding/models/depth_8_epoch_42.bin
+generating random images from the trained generator ...
+computing fid ...
+compute FID between two folders
+Found 4065 images in the folder /home/c/carska8/diplomova_praca/data/front_256
+Found 100 images in the folder /tmp/tmptnzw854y
+fid score:  343.332
